@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 203 37% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 173 58% 39%;
+    --secondary-foreground: 216 100% 4%;
+    --background: 180 10% 96%;
+    --foreground: 216 100% 4%;
+    --card: 180 10% 94%;
+    --card-foreground: 216 100% 4%;
+    --popover: 180 10% 93%;
+    --popover-foreground: 216 100% 4%;
+    --muted: 180 12% 90%;
+    --muted-foreground: 180 12% 30%;
+    --accent: 43 100% 51%;
+    --accent-foreground: 216 100% 4%;
+    --destructive: 4 86% 41%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 120 100% 20%;
+    --success-foreground: 0 0% 100%;
+    --border: 173 58% 39%;
+    --input: 195 83% 38%;
+    --ring: 195 83% 16%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 203 37% 22%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 43 100% 51%;
+    --sidebar-primary-foreground: 216 100% 4%;
+    --sidebar-accent: 222 100% 84%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  pre {
+    @apply p-2 bg-foreground text-background rounded-md;
+  }
+  .tiptap-content a {
+    @apply text-blue-500 text-sm underline hover:text-blue-700;
+  }
+}
