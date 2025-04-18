@@ -13,17 +13,7 @@ out/
 bin/
 
 # Docker
-.docker/
-docker-compose.override.yml
-docker-compose.*.yml
-.env
-.env.local
-.env.*.local
-**/Dockerfile
-**/Dockerfile.*
-**/dockerfile
-**/dockerfile.*
-**/.dockerignore
+docker-compose.yml
 
 # IDE
 .idea/
