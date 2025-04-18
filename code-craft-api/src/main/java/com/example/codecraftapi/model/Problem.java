@@ -29,7 +29,7 @@ public class Problem {
   @Column(name = "name", length = 500)
   private String name;
 
-  @Size(max = 500)
+  @Size(max = 5000)
   @Column(name = "description", length = 5000)
   private String description;
 

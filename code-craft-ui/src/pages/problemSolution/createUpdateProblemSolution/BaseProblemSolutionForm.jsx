@@ -98,7 +98,7 @@ const BaseProblemSolutionForm = ({
     formData.append("file", selectedFile);
 
     try {
-      const response = await fetch("http://localhost:4174/api/file/upload", {
+      const response = await fetch("http://localhost:4000/api/file/upload", {
         method: "POST",
         body: formData,
       });
