@@ -1,0 +1,62 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="code-craft-service" type="docker-deploy"
+    factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="code-craft-service:latest" />
+        <option name="containerName" value="code-craft-service" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="AWS_ACCESS_KEY" />
+              <option name="value" value="" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="AWS_BUCKET_NAME" />
+              <option name="value" value="code-craft-bucket" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="AWS_REGION" />
+              <option name="value" value="eu-north-1" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="AWS_SECRET_KEY" />
+              <option name="value" value="" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="FRONTEND_URL" />
+              <option name="value" value="http://localhost:4000" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_PASSWORD" />
+              <option name="value" value="12345" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_URL" />
+              <option name="value" value="jdbc:postgresql://code-craft-db:5432/db" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_USERNAME" />
+              <option name="value" value="admin_user" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_JPA_HIBERNATE_DDL_AUTO" />
+              <option name="value" value="update" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="4005" />
+              <option name="hostPort" value="4005" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="commandLineOptions" value="--network scaler" />
+        <option name="sourceFilePath" value="code-craft-api/Dockerfile" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
