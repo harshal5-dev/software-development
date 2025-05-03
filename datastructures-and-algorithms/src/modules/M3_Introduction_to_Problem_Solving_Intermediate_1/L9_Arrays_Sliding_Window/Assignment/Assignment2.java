@@ -1,10 +1,10 @@
-package modules.M3_Introduction_to_Problem_Solving_Intermediate_1.L9_Arrays_Sliding_Window.Lecture;
+package modules.M3_Introduction_to_Problem_Solving_Intermediate_1.L9_Arrays_Sliding_Window.Assignment;
 
-public class MinimumSwap {
+public class Assignment2 {
 
-  static int findMinimumSwap(int[] A, int B) {
-    int k = 0;
+  int solve(int[] A, int B) {
     int N = A.length;
+    int k = 0;
 
     for (int ele: A) {
       if (ele <= B) {
@@ -16,7 +16,7 @@ public class MinimumSwap {
       return 0;
     }
 
-    int bad = 0;
+    int bad= 0;
     for (int index = 0; index < k; index++) {
       if (A[index] > B) {
         bad++;
@@ -33,10 +33,9 @@ public class MinimumSwap {
       if (A[e] > B) {
         bad++;
       }
-
+      ans = Math.min(ans, bad);
       s++;
       e++;
-      ans = Math.min(ans, bad);
     }
 
     return ans;
