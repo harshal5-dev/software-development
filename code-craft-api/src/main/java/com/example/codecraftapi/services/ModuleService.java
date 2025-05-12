@@ -64,7 +64,7 @@ public class ModuleService {
       moduleInfo.setLectures(lectureList);
       moduleList.add(moduleInfo);
     }
-    return moduleList;
+    return moduleList.stream().sorted((m1, m2) -> m1.getModuleNumber().compareToIgnoreCase(m2.getModuleNumber())).toList();
   }
 
   public Module getModuleById(int id) {
