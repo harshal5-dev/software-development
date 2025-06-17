@@ -21,7 +21,7 @@ public class Assignment5 {
 
     for (int index = 0; index < N; index++) {
       int leftSum = 0;
-      int rightSum = 0;
+      int rightSum;
 
       if (index > 0) {
         leftSum = prefixSum[index-1];
