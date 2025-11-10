@@ -97,7 +97,7 @@ public class Practice6 {
     return sum;
   }
 
-  static int antiDiagonalElement(int[][] A) {
+  static int[][] antiDiagonalElement(int[][] A) {
     int N = A.length;
     int[][] result = new int[2 * N - 1][N];
     int resultIndex = 0;
@@ -106,13 +106,13 @@ public class Practice6 {
       int x = 0;
       int y = col;
       int[] subArr = new int[N];
-      int subIndex = 0;
+      int subArrIndex = 0;
 
       while (x < N && y >= 0) {
-        subArr[subIndex] = A[x][y];
+        subArr[subArrIndex] = A[x][y];
+        subArrIndex++;
         x++;
         y--;
-        subIndex++;
       }
 
       result[resultIndex] = subArr;
@@ -121,15 +121,15 @@ public class Practice6 {
 
     for (int row = 1; row < N; row++) {
       int x = row;
-      int y = N - 1;
+      int y = N-1;
       int[] subArr = new int[N];
-      int subIndex = 0;
+      int subArrIndex = 0;
 
       while (x < N && y >= 0) {
-        subArr[subIndex] = A[x][y];
+        subArr[subArrIndex] = A[x][y];
+        subArrIndex++;
         x++;
         y--;
-        subIndex++;
       }
 
       result[resultIndex] = subArr;
